@@ -1,5 +1,5 @@
 <h1>Hola mundo</h1>
-<button mat-button (click)="toggleTheme()">
-  Toggle Theme
-</button>
+<span>light</span>
+<mat-slide-toggle (change)="toggleTheme()"></mat-slide-toggle>
+<span>dark</span>
 <router-outlet></router-outlet>

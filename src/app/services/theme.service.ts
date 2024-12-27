@@ -7,7 +7,7 @@ export class ThemeService {
 
   constructor() { }
 
-  private themeClass = localStorage.getItem('theme') ?? 'light-theme';
+  private themeClass = localStorage.getItem('theme') || 'light-theme';
 
   setTheme(theme: 'light-theme' | 'dark-theme') {
     this.themeClass = theme;
