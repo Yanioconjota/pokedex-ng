@@ -8,9 +8,14 @@ import { PokemonService } from '../../services/pokemon.service';
   standalone: false
 })
 export class PokemonsComponent implements OnInit {
+
+  pokemons!: any[];
   constructor (private readonly pokemonService: PokemonService) {}
 
   ngOnInit(): void {
-    this.pokemonService.get('pokemon').subscribe(res => console.log(res));
+    this.pokemonService.get('pokemon').subscribe((res: any) => {
+      console.log(res);
+      this.pokemons = [...res];
+    });
   }
 }
