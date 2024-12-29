@@ -172,41 +172,6 @@
   background-size: $size;
 }
 
-
-// scss-docs-start caret-mixins
-@mixin caret-down {
-  content: $chevron-down;
-  font-family: $mat-icons;
-}
-
-@mixin caret-up {
-  content: $chevron-up;
-  font-family: $mat-icons;
-}
-
-@mixin caret-end {
-  content: $chevron-right;
-  font-family: $mat-icons;
-}
-
-@mixin caret-start {
-  content: $chevron-left;
-  font-family: $mat-icons;
-}
-
-@mixin caret($direction: down, $caret-size) {
-  font-size: $caret-size;
-  @if $direction == down {
-      @include caret-down();
-  } @else if $direction == up {
-      @include caret-up();
-  } @else if $direction == end {
-      @include caret-end();
-  } @else if $direction == start {
-      @include caret-start();
-  }
-}
-
 // scss-docs-end caret-mixins
 
 @mixin mat-icon-resize($size) {
