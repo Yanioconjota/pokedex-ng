@@ -6,8 +6,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { HttpClientModule } from '@angular/common/http';
 
-const imports = [CommonModule, FormsModule, MatButtonModule, RouterOutlet, MatSlideToggleModule];
+const imports = [CommonModule, FormsModule, HttpClientModule, MatButtonModule, RouterOutlet, MatSlideToggleModule];
 const components = [HeaderComponent, ThemeToggleComponent];
 
 @NgModule({
