@@ -3,15 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './modules/shared/shared.module';
+import { PokemonModule } from './modules/pokemon/pokemon.module';
 
 @NgModule({
-  declarations: [AppComponent], // Componentes que no sean standalone van aquí
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([]), // Si usas rutas, agrega tus rutas aquí
+    RouterModule.forRoot([]),
     SharedModule,
+    PokemonModule
   ],
-  providers: [], // Servicios globales van aquí
-  bootstrap: [AppComponent], // Componente raíz
+  providers: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

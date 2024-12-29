@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon',
-  imports: [],
   templateUrl: './pokemon.component.html',
-  styleUrl: './pokemon.component.scss'
+  styleUrl: './pokemon.component.scss',
+  standalone: false
 })
 export class PokemonComponent {
 
