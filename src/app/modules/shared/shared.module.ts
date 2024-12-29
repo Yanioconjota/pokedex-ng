@@ -4,8 +4,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { FormsModule } from '@angular/forms';
 
-const imports = [CommonModule, MatButtonModule, RouterOutlet, MatSlideToggleModule]
+const imports = [CommonModule, FormsModule, MatButtonModule, RouterOutlet, MatSlideToggleModule]
 
 
 @NgModule({

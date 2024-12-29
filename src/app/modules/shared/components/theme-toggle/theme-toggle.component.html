@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center">
   <span class="mx-2">light</span>
-  <mat-slide-toggle (change)="toggleTheme()"></mat-slide-toggle>
+  <mat-slide-toggle [(ngModel)]="isChecked" (change)="toggleTheme()"></mat-slide-toggle>
   <span class="mx-2">dark</span>
 </div>
