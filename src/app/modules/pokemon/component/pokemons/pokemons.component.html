@@ -2,9 +2,9 @@
 
 <div class="row">
   @for (pokemon of pokemons; track $index) {
-    <div class="pokemon col ">
+    <div class="pokemon col">
       <img [src]=pokemon.img [alt]=pokemon.name>
-      <div>{{pokemon.name | uppercase}}</div>
+      <h4>{{pokemon.name | uppercase}}</h4>
     </div>
   }
 </div>
