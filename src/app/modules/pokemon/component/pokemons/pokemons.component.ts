@@ -1,3 +1,4 @@
+import { Pokemon, PokemonResponse } from './../../models/pokemon.model';
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 
@@ -9,13 +10,15 @@ import { PokemonService } from '../../services/pokemon.service';
 })
 export class PokemonsComponent implements OnInit {
 
-  pokemons!: any[];
+  pokemons!: Pokemon[];
   constructor (private readonly pokemonService: PokemonService) {}
 
   ngOnInit(): void {
-    this.pokemonService.get('pokemon').subscribe((res: any) => {
-      console.log(res);
-      this.pokemons = [...res];
+    this.pokemonService.get('pokemon').subscribe((res: PokemonResponse[]) => {
+      this.pokemons = res.map(item => {
+        const img = `${this.pokemonService.imgUrl}/${item.no}.png`;
+        return new Pokemon(item.no, item.name, img);
+      });
     });
   }
 }

@@ -1,5 +1,10 @@
-<h2>Pokemon list from nest backend | WIP</h2>
+<h2>Pokemon list from nest backend</h2>
 
-@for (pokemon of pokemons; track $index) {
-  <div>{{pokemon.name | uppercase}}</div>
-}
+<div class="row">
+  @for (pokemon of pokemons; track $index) {
+    <div class="pokemon col">
+      <img [src]=pokemon.img [alt]=pokemon.name>
+      <h4>{{pokemon.name | uppercase}}</h4>
+    </div>
+  }
+</div>
